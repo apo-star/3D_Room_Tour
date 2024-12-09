@@ -1,0 +1,52 @@
+{
+  "name": "samara-pano",
+  "version": "1.0.1",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "cross-env NODE_ENV=prod webpack --config webpack.config.babel.js",
+    "dev": "webpack-dev-server --host 0.0.0.0",
+    "doc": "jsdoc -c jsdoc.json",
+    "commit": "git add . && git commit -m \"Changes: $(git diff --cached --numstat | awk '{files += 1; insertions += $1; deletions += $2} END {print files \"f \" insertions \"+\" deletions \"-\"}')\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/plugin-transform-arrow-functions": "^7.25.9",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/register": "^7.25.9",
+    "@egjs/agent": "^2.4.4",
+    "babel-loader": "^9.2.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "cross-env": "^7.0.3",
+    "glsl-parser": "^2.0.1",
+    "glsl-template-loader": "^1.2.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "prettier": "^3.4.1",
+    "prettier-plugin-glsl": "^0.2.0",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0",
+    "webpack-plugin-hash-output": "^3.2.1"
+  },
+  "dependencies": {
+    "camera-controls": "^2.9.0",
+    "glslify-loader": "^2.0.0",
+    "gsap": "^3.12.5",
+    "hold-event": "^0.2.0",
+    "jsdoc": "^4.0.4",
+    "lit": "^3.2.1",
+    "lodash": "^4.17.21",
+    "n8ao": "^1.9.3",
+    "postprocessing": "^6.36.4",
+    "raw-loader": "^4.0.2",
+    "realism-effects": "^1.1.2",
+    "rxjs": "^7.8.1",
+    "three": "^0.170.0"
+  }
+}
